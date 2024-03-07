@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  .slide p {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #f4efef, #21059b, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 4s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  .slides p {
+    /* position: relative; */
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    /* overflow: hidden; */
+    background: linear-gradient(90deg, #f4efef, #21059b, #1ad76c);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+
+
+  .animate-text {
+    /* Apply the provided background gradient */
+    background-image: radial-gradient(var(--tw-gradient-stops)), 
+                      linear-gradient(to right, #38b2ac, #9f7aea, #ed64a6);
+    /* Set text color to transparent */
+    color: transparent;
+    /* Use background-clip to apply background to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set font size, weight, and color */
+    font-size: 5rem;
+    font-weight: 900;
+    /* Apply animation with specified timing function and iteration count */
+    animation: text 5s ease infinite;
+  }
+
+
+  /* Define keyframes for animation */
+  @keyframes text {
+    0%, 100% {
+      /* Set initial and final background size and position */
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      /* Set background size and position for halfway point */
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  
